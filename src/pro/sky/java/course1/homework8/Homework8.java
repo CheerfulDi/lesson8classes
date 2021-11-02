@@ -4,18 +4,20 @@ import java.util.Arrays;
 
 public class Homework8 {
 
+    static Book[] bookShelf = new Book[5];
+
     public static void main(String[] args) {
 
-        Author pullman = new Author("Филип Пулман");
-        Book darkMaterials = new Book("Чудесный нож", pullman.getAuthorName(), 2021);
+        Author pullman = new Author("Филип", "Пулман");
+        Book darkMaterials = new Book("Чудесный нож", pullman, 2021);
 
 //        System.out.println("Информация о книге №1: ");
 //        System.out.println("Автор: " + darkMaterials.getAuthor());
 //        System.out.println("Название: " + darkMaterials.getBookName());
 //        System.out.println("Год издания: " + darkMaterials.getPublishingYear());
 
-        Author fry = new Author("Стивен Фрай");
-        Book myths = new Book("Греческие мифы в пересказе", fry.getAuthorName(), 2018);
+        Author fry = new Author("Стивен", "Фрай");
+        Book myths = new Book("Греческие мифы в пересказе", fry, 2018);
 
 //        System.out.println("Информация о книге №1: ");
 //        System.out.println("Автор: " + myths.getAuthor());
@@ -24,28 +26,33 @@ public class Homework8 {
         myths.setPublishingYear(2020);
 //        System.out.println("Переиздание: " + myths.getPublishingYear());
 
-        Book[] bookShelf = new Book [5];
-        addNewBook(bookShelf, darkMaterials);
-        addNewBook(bookShelf, myths);
-        printBookShelf(bookShelf, darkMaterials);
-        printBookShelf(bookShelf, myths);
 
-        }
+        addNewBook(darkMaterials);
+        addNewBook(myths);
+        printBookShelf(darkMaterials);
+        printBookShelf(myths);
 
-    public static Book [] addNewBook(Book [] bookShelf, Book book) {
+
+
+    }
+
+    public static Book[] addNewBook(Book book) {
         for (int i = 0; i < bookShelf.length; i++) {
             if (bookShelf[i] == null) {
                 bookShelf[i] = book;
                 break;
             }
-        } return bookShelf;
+        }
+        return bookShelf;
     }
 
-    public static void printBookShelf (Book [] bookShelf, Book book) {
-        for (int i = 0; i < bookShelf.length; i++) {
-            System.out.println(book.getAuthor() + ": " + book.getBookName() + ": " + book.getPublishingYear());
-            break;
-        }
+    public static void printBookShelf(Book book) {
+        for (Book value : bookShelf) {
+            if (value != null) {
+                System.out.println(book.getAuthor() + ": " + book.getBookName() + ": " + book.getPublishingYear());
+                break;
+            }
 
+        }
     }
 }
