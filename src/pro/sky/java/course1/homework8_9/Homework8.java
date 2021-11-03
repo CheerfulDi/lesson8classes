@@ -1,6 +1,4 @@
-package pro.sky.java.course1.homework8;
-
-import java.util.Arrays;
+package pro.sky.java.course1.homework8_9;
 
 public class Homework8 {
 

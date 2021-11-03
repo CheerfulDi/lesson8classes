@@ -1,4 +1,4 @@
-package pro.sky.java.course1.homework8;
+package pro.sky.java.course1.homework8_9;
 
 public class Book {
 
