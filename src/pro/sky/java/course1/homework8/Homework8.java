@@ -21,7 +21,7 @@ public class Homework8 {
         bookShelf.printBookShelf(darkMaterials);
         bookShelf.printBookShelf(myths);
         System.out.println();
-        bookShelf.printBookInformationByName(darkMaterials);
+        bookShelf.printBookInformationByName(myths);
         System.out.println("Первоначальный год издания книги " + myths.getBookName());
         bookShelf.printBookInformationByName(myths);
 

@@ -26,9 +26,9 @@ public class Library {
         }
     }
 
-    public void printBookInformationByName(Book book) {
-        for (Book book1 : bookShelf) {
-            if (book1 != null) {
+    public void printBookInformationByName(Book bookName) {
+        for (Book book : bookShelf) {
+            if (book != null) {
                 System.out.println(book.getBookName() + " by " + book.getAuthor().getAuthorName() + book.getAuthor().getAuthorLastName()
                 + " was published in " + book.getPublishingYear());
                 break;
