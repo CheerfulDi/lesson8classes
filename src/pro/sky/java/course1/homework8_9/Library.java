@@ -30,7 +30,7 @@ public class Library {
         for (Book book : bookShelf) {
             if (book != null) {
                 System.out.println(book.getBookName() + " by " + book.getAuthor().getAuthorName() + book.getAuthor().getAuthorLastName()
-                + " was published in " + book.getPublishingYear());
+                        + " was published in " + book.getPublishingYear());
                 break;
             }
         }
@@ -38,8 +38,17 @@ public class Library {
 
     public void changePublishingYearByBookName(Book bookName, int newPublishingYear) {
         bookName.setPublishingYear(newPublishingYear);
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < bookShelf.length; i++) {
+            if (bookShelf[i] != null) {
+                sb.append(bookShelf[i]);
+                sb.append("\n");
+            }
         }
+        return sb.toString();
 
-
+    }
 }
-

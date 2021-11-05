@@ -31,9 +31,10 @@ public class Homework8 {
         System.out.println();
         System.out.println("Homework 9");
         System.out.println();
-        System.out.println(myths.toString());
-        System.out.println();
-        System.out.println(darkMaterials.toString());
+//        System.out.println(myths.toString());
+//        System.out.println();
+//        System.out.println(darkMaterials.toString());
+        System.out.println(bookShelf.toString());
 
     }
 }
