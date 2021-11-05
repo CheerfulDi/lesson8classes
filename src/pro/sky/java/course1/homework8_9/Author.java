@@ -6,7 +6,7 @@ public class Author {
 
     private final String authorName;
     private final String authorLastName;
-    private int id;
+
 
 
     public Author(String authorName, String authorLastName) {
@@ -27,23 +27,18 @@ public class Author {
         return authorName + authorLastName;
     }
 
-    public boolean equals (Object other) {
-        if (this.getClass() != other.getClass()){
-            return false;
-        }
-        Author author = (Author) other;
-        return authorLastName == author.authorLastName;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return authorName.equals(author.authorName) && authorLastName.equals(author.authorLastName);
     }
 
+    @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(authorName, authorLastName);
     }
-
-
-
-
-
-
 }
 
 
