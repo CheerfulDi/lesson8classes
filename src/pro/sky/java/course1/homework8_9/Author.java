@@ -20,6 +20,13 @@ public class Author {
         return this.authorLastName;
     }
 
+    public String toString() {
+        return this.authorName + authorLastName;
+    }
+
+
+
+
 
 
 }

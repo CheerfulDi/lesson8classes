@@ -26,5 +26,13 @@ public class Homework8 {
         bookShelf.changePublishingYearByBookName(myths, 2020);
         System.out.println("Новый год издания книги " + myths.getBookName());
         bookShelf.printBookInformationByName(myths);
+
+        // HOMEWORK 9
+        System.out.println();
+        System.out.println("Homework 9");
+        System.out.println();
+        System.out.println(myths.toString());
+        System.out.println();
+        System.out.println(darkMaterials.toString());
     }
 }

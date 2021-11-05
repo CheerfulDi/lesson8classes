@@ -29,4 +29,8 @@ public class Book {
         this.publishingYear = publishingYear;
         }
 
+    public String toString() {
+        return "Автор книги: " + this.author + ". Название: " + this.bookName + ". Год издания: " + this.publishingYear;
+    }
+
 }
