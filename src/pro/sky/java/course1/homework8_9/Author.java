@@ -4,27 +4,27 @@ import java.util.Objects;
 
 public class Author {
 
-    private final String authorName;
-    private final String authorLastName;
+    private final String firstName;
+    private final String lastName;
 
 
 
-    public Author(String authorName, String authorLastName) {
-        this.authorName = authorName + " ";
-        this.authorLastName = authorLastName;
+    public Author(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
 
     }
 
     public String getAuthorName() {
-        return this.authorName;
+        return firstName;
     }
 
     public String getAuthorLastName() {
-        return this.authorLastName;
+        return lastName;
     }
 
     public String toString() {
-        return authorName + authorLastName;
+        return firstName + " " + lastName;
     }
 
     @Override
@@ -32,12 +32,12 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return authorName.equals(author.authorName) && authorLastName.equals(author.authorLastName);
+        return firstName.equals(author.firstName) && lastName.equals(author.lastName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(authorName, authorLastName);
+        return Objects.hash(firstName, lastName);
     }
 }
 

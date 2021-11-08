@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Book {
 
     private final String bookName;
-    private Author author;
+    private final Author author;
     private int publishingYear;
 
     public Book(String bookName, Author author, int publishingYear) {
@@ -16,15 +16,15 @@ public class Book {
 
 
     public String getBookName() {
-        return this.bookName;
+        return bookName;
     }
 
     public Author getAuthor() {
-        return this.author;
+        return author;
     }
 
     public int getPublishingYear() {
-        return this.publishingYear;
+        return publishingYear;
     }
 
     public void setPublishingYear(int publishingYear) {
@@ -32,7 +32,7 @@ public class Book {
         }
 
     public String toString() {
-        return "Автор книги: " + author.toString() + ". Название: " + this.bookName + ". Год издания: " + this.publishingYear;
+        return "Автор книги: " + author.toString() + ". Название: " + bookName + ". Год издания: " + publishingYear;
     }
 
     @Override

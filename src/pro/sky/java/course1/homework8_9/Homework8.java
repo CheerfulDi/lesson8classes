@@ -16,8 +16,7 @@ public class Homework8 {
         bookShelf.addNewBook(darkMaterials);
         bookShelf.addNewBook(myths);
 
-        bookShelf.printBookShelf(darkMaterials);
-        bookShelf.printBookShelf(myths);
+        bookShelf.printBookShelf();
         System.out.println();
         bookShelf.printBookInformationByName("Mythos: A Retelling of the Myths of Ancient Greece");
         System.out.println("Первоначальный год издания книги " + myths.getBookName());

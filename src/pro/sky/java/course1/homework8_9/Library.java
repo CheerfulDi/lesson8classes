@@ -4,26 +4,30 @@ public class Library {
 
     private final Book[] bookShelf;
 
-    Library(int bookShelf) {
-        this.bookShelf = new Book[bookShelf];
+    public Library(int bookShelfSize) {
+        bookShelf = new Book[bookShelfSize];
     }
 
-    public void addNewBook(Book book) {
+    public boolean addNewBook(Book book) {
         for (int i = 0; i < bookShelf.length; i++) {
             if (bookShelf[i] == null) {
                 bookShelf[i] = book;
-                break;
+               return true;
+            }
+        } return false;
+    }
+
+    public void printBookShelf() {
+        for (Book book : bookShelf) {
+            if (book != null) {
+                printBook(book);
             }
         }
     }
 
-    public void printBookShelf(Book book) {
-        for (Book book1 : bookShelf) {
-            if (book1 != null) {
-                System.out.println(book.getAuthor().getAuthorName() + book.getAuthor().getAuthorLastName() + ": " + book.getBookName() + ": " + book.getPublishingYear());
-                break;
-            }
-        }
+    public void printBook(Book book) {
+        System.out.println(book.getAuthor().getAuthorName() + book.getAuthor().getAuthorLastName() + ": " + book.getBookName() + ": " + book.getPublishingYear());
+
     }
 
     public void printBookInformationByName(String bookName) {
