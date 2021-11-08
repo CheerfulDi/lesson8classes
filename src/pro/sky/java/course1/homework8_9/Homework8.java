@@ -19,13 +19,13 @@ public class Homework8 {
         bookShelf.printBookShelf(darkMaterials);
         bookShelf.printBookShelf(myths);
         System.out.println();
-        bookShelf.printBookInformationByName(myths);
+        bookShelf.printBookInformationByName("Mythos: A Retelling of the Myths of Ancient Greece");
         System.out.println("Первоначальный год издания книги " + myths.getBookName());
-        bookShelf.printBookInformationByName(myths);
+        bookShelf.printBookInformationByName("Mythos: A Retelling of the Myths of Ancient Greece");
 
-        bookShelf.changePublishingYearByBookName(myths, 2020);
+        bookShelf.changePublishingYearByBookName("Mythos: A Retelling of the Myths of Ancient Greece", 2020);
         System.out.println("Новый год издания книги " + myths.getBookName());
-        bookShelf.printBookInformationByName(myths);
+        bookShelf.printBookInformationByName("Mythos: A Retelling of the Myths of Ancient Greece");
 
         // HOMEWORK 9
         System.out.println();

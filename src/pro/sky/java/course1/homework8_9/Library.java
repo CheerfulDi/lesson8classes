@@ -26,9 +26,9 @@ public class Library {
         }
     }
 
-    public void printBookInformationByName(Book bookName) {
+    public void printBookInformationByName(String bookName) {
         for (Book book : bookShelf) {
-            if (book != null) {
+            if (book != null && book.getBookName().equals(bookName)) {
                 System.out.println(book.getBookName() + " by " + book.getAuthor().getAuthorName() + book.getAuthor().getAuthorLastName()
                         + " was published in " + book.getPublishingYear());
                 break;
@@ -36,15 +36,20 @@ public class Library {
         }
     }
 
-    public void changePublishingYearByBookName(Book bookName, int newPublishingYear) {
-        bookName.setPublishingYear(newPublishingYear);
+    public void changePublishingYearByBookName(String bookName, int newPublishingYear) {
+        for (Book book: bookShelf) {
+            if (book != null && book.getBookName().equals(bookName)){
+                book.setPublishingYear(newPublishingYear);
+                break;
+            }
+        }
     }
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < bookShelf.length; i++) {
-            if (bookShelf[i] != null) {
-                sb.append(bookShelf[i]);
+        for (Book book : bookShelf) {
+            if (book != null) {
+                sb.append(book);
                 sb.append("\n");
             }
         }
